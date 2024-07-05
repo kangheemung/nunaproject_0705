@@ -31,30 +31,32 @@ let storeAddress = {
     country: "Korea",
     city: "Seoul"
 };
-//function findStore(obj){
-  //  return Newname === "noona stroe" &&city==="Soul"
-//}
-function findStore({ name, address: { city } }) {
-    return name === "noona store" && city === "Seoul";
+function findStore(obj){
+    return Newname === "noona stroe" &&city==="Soul"
 }
+//function findStore({ name, address: { city } }) {
+  //  return name === "noona store" && city === "Seoul";
+//}
 
-//console.log(findStore({Newname,Newfruits,Newaddress}))
+console.log(findStore({Newname,Newfruits,Newaddress}))
 
-console.log(findStore({ name: storeName, fruits: storeFruits, address: storeAddress }));
+//console.log(findStore({ name: storeName, fruits: storeFruits, address: storeAddress }));
 
 //5.다음과 같이 프린트되게 코드를 바꾸시오
-//function getNumber(){
-  //  let array=[1,2,3,4,5,6]//여기서부터 바꾸세요
-    //return{first,third,forth}
-//}
-//console.log(getNumber())//결과값 {first:1,third:3,forth:4}
-function getNumber() {
-    let array = [1, 2, 3, 4, 5, 6];
-    const [first, , third, forth] = array; // Destructuring 사용
-    return { first, third, forth };
+function getNumber(){
+    let array=[1,2,3,4,5,6]//여기서부터 바꾸세요
+    return{first,third,forth}
 }
+console.log(getNumber())//결과값 {first:1,third:3,forth:4}
 
-console.log(getNumber());
+
+//function getNumber() {
+ //   let array = [1, 2, 3, 4, 5, 6];
+ //   const [first, , third, forth] = array; // Destructuring 사용
+ //   return { first, third, forth };
+//}
+
+//console.log(getNumber());
 //6.다음 결과가 true가되게 하시오
 function getcCalendar(first,...rest){
     return(
@@ -97,11 +99,10 @@ console.log(getMinimum());
    // };
    // return sum(40, 10);
 //}
-function sumNumbers(){
+function sumNumber(){
     const sum = (a, b) =>  a + b
     return sum(40, 10);
 }
-console.log(sumNumbers());
 //다음 함수를 화살표로 함수로 바꾸시오
 
 
