@@ -6,24 +6,25 @@ let address="Seoul";
 const store = { name,fruits ,address}
 console.log(store)
 //2 es문법을 이용하여 다음과 같이 출력하시오
-const meassage=`제 가게 이름은 ${ name}입니다.위치는 ${address}에 있습니다.`
+const meassage=`제 가게 이름은 ${ store.name}입니다.위치는 ${store.address}에 있습니다.`
 console.log(meassage)
 
 
-///다음코드를Desyructoring을 이용하여 해결하시오
+///3 다음코드를Desyructoring을 이용하여 해결하시오
 //function calculate(obj){
   //  return obj.a+obj.b+obj.c//　함수안을 바꾸기
 //}
 //calculate({a:1,b:2,c:3})
 
-function calculate({ a, b, c }) {
+function calculate(obj ) {
+    let {a,b,c}=obj
     return a + b + c;
 }
 
-calculate({ a: 1, b: 2, c: 3 });
+calculate({ a:1, b:2, c:3 });
 
 
-//다음 문제의 정답이 true 가 나오게 하시오
+//4 다음 문제의 정답이 true 가 나오게 하시오
 let storeName = "noona store";
 let storeFruits = ["banana", "apple", "mango"];
 let storeAddress = {
@@ -54,3 +55,41 @@ function getNumber() {
 }
 
 console.log(getNumber());
+//6.다음 결과가 true가되게 하시오
+function getcCalendar(first,...rest){
+    return(
+        first=== "January"&&
+        reset[0] === "Febuary"&&
+        reset[1] ===  "March"&&
+        reset[2] === undefined
+    );
+}
+console.log(getcCalendar());//여기 바꾸기
+//7 두 어레이들중최소값을 찾는 함수를 완성하시오
+function getMinimum(){
+    let a=[45,23,78]
+    let b =[54,11,9]
+    return Math.min//여기를 바꾸시오
+}
+console.log(getMinimum())
+//8다음의 함수를 화살표 함수로 바꾸시오
+function sumNumber(){
+    //여기를 바꾸기
+    const sum =function(a,b){
+    return a+b;
+};
+return sum(40,10);
+}
+
+function sumNumber(){
+return addNumber(1)(2)(3);
+    function addNumber(a){
+        return function(b){
+            return function(c){
+                return a + b + c;
+            };
+        };
+    }
+}
+console.log(sumNumber());
+//9 디음함수를 화살표 함수로 바꾸시오.
