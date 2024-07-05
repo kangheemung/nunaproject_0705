@@ -58,38 +58,88 @@ console.log(getNumber());
 //6.다음 결과가 true가되게 하시오
 function getcCalendar(first,...rest){
     return(
-        first=== "January"&&
-        reset[0] === "Febuary"&&
-        reset[1] ===  "March"&&
-        reset[2] === undefined
+        first === "January" &&
+        rest[0] === "February" &&
+        rest[1] ===  "March" &&
+        rest[2] === undefined
     );
 }
-console.log(getcCalendar());//여기 바꾸기
-//7 두 어레이들중최소값을 찾는 함수를 완성하시오
-function getMinimum(){
-    let a=[45,23,78]
-    let b =[54,11,9]
-    return Math.min//여기를 바꾸시오
-}
-console.log(getMinimum())
-//8다음의 함수를 화살표 함수로 바꾸시오
-function sumNumber(){
-    //여기를 바꾸기
-    const sum =function(a,b){
-    return a+b;
-};
-return sum(40,10);
+console.log(getcCalendar("January", "February", "March"));//여기 바꾸기
+
+
+//7 두 어레이들중 최소값을 찾는 함수를 완성하시오
+//function getMinimum(){
+  //  let a=[45,23,78]
+    //let b =[54,11,9]
+    //return Math.min//여기를 바꾸시오
+//}
+//console.log(getMinimum())
+
+function getMinimum() {
+    let a = [45, 23, 78];
+    let b = [54, 11, 9];
+    return Math.min(...a, ...b);
 }
 
-function sumNumber(){
-return addNumber(1)(2)(3);
-    function addNumber(a){
-        return function(b){
-            return function(c){
-                return a + b + c;
-            };
-        };
-    }
+console.log(getMinimum());
+
+//8다음의 함수를 화살표 함수로 바꾸시오
+//function sumNumber(){
+    //여기를 바꾸기
+  //  const sum =function(a,b){
+    //return a+b;
+//};
+//return sum(40,10);
+//}
+//const sumNumbers = () => {
+   // const sum = (a, b) => {
+   //     return a + b;
+   // };
+   // return sum(40, 10);
+//}
+function sumNumbers(){
+    const sum = (a, b) =>  a + b
+    return sum(40, 10);
 }
-console.log(sumNumber());
+console.log(sumNumbers());
+//다음 함수를 화살표로 함수로 바꾸시오
+
+
+//function sumNumber(){
+//return addNumber(1)(2)(3);
+  //  function addNumber(a){
+    //    return function(b){
+      //      return function(c){
+        //        return a + b + c;
+          //  };
+       // };
+   // }
+//}
+//console.log(sumNumber());
 //9 디음함수를 화살표 함수로 바꾸시오.
+//const sumNumber = () => {
+   // return addNumber(1)(2)(3);
+//};
+//////
+///function addNumber(){
+///const addNumber = a => b => c => {
+///    return a + b + c;
+///};
+///}
+///console.log(sumNumber());
+function sumNumber(){
+    const addNumber = (a) => (b) => (c) => a + b + c;
+        return  addNumber (1)(2)(3);
+    }
+
+    console.log(sumNumber());
+
+//function addNumber(a){
+  //  return function(b){
+    //    return function(c){
+      //      return a+b+c;
+       // };
+    //};
+//}
+//return addNumber(1)(2)(3);
+//console.log(sumNumber());
