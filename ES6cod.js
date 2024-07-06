@@ -26,9 +26,9 @@ function calculate(obj){
 calculate({a:1,b:2,c:3})
 
 //4 다음 문제의 정답이 true 가 나오게 하시오
-let name="noona store"
-let fruits = ["banana","apple","mango"]
-let address={
+let name1="noona store"
+let fruits1 = ["banana","apple","mango"]
+let address1={
     country:"Korea",
     city:"Seoul"
 }
@@ -37,7 +37,7 @@ function findStore(obj){
    let {name,address:{city}} = obj
     return name=="noona store" && city=="Seoul"}
 
-console.log(findStore({name,fruits,address}))
+console.log(findStore({name1,fruits1,address1}))
 
 //console.log(findStore({ name: storeName, fruits: storeFruits, address: storeAddress }));
 
